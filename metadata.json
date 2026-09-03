@@ -1,0 +1,6 @@
+{
+  "name": "Tide",
+  "description": "Time-blocked dashboards, room-based clustering, and 4-4-5 fiscal calendar sync for shared household equilibrium.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

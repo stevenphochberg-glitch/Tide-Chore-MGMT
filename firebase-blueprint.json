@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "households": {
+      "fields": {
+        "name": { "type": "string" },
+        "syncCode": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "createdByName": { "type": "string" },
+        "createdByUid": { "type": "string" },
+        "members": { "type": "map" }
+      },
+      "subcollections": {
+        "chores": {
+          "fields": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "owner": { "type": "string", "enum": ["steve", "nicole", "shared"] },
+            "status": { "type": "string", "enum": ["todo", "in_progress", "done"] },
+            "priority": { "type": "string", "enum": ["low", "medium", "high"] },
+            "quadrant": { "type": "string" },
+            "points": { "type": "number" },
+            "createdAt": { "type": "timestamp" },
+            "updatedAt": { "type": "timestamp" }
+          }
+        }
+      }
+    },
+    "users": {
+      "fields": {
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "profileName": { "type": "string", "enum": ["Steve", "Nicole", "Guest"] },
+        "householdId": { "type": "string" },
+        "lastActive": { "type": "timestamp" }
+      }
+    }
+  }
+}
